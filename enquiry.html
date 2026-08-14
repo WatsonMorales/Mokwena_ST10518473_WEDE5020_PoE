@@ -41,7 +41,30 @@
                 <input type="tel" id="phone" name="phone" required>
                     <br><br>
             </fieldset>
-            
+            <fieldset>
+                <legend>Service Information</legend>
+                <label for="service">Select a Service:</label>
+                    <br>
+                <select id="service" name="service" required>
+                    <option value="">-- Select a Service --</option>
+                    <option value="standard-clean">Standard Sneaker Clean</option>
+                    <option value="deep-clean">Deep Clean</option>
+                    <option value="sole-care">Sole Care</option>
+                    <option value="premium-care">Premium Shoe Care</option>
+                </select>
+                    <br><br>
+                <label for="shoes">Type of Footwear:</label><br>
+                <input type="text" id="shoes" name="shoes" placeholder="e.g. Nike Air Force 1" required>
+                    <br><br>
+                <label for="quantity">Number of Pairs:</label><br>
+                <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+                <label for="date">Preferred Service Date:</label><br>
+                <input type="date" id="date" name="date"><br><br>
+                <label for="message">Additional Information:</label><br>
+                <textarea id="message" name="message" rows="6" cols="40" placeholder="Tell us about the condition of your shoes or any specific requirements."></textarea><br><br>
+            </fieldset>
+            <input type="submit" value="Submit Enquiry">
+            <input type="reset" value="Clear Form">
         </form>
         </section>
         <section>
