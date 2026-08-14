@@ -140,6 +140,8 @@ It includes:
 ## 5. Sitemap
 
 The planned website structure is:
+
+```text
 SOLE REVIVE
 │
 ├── Home
