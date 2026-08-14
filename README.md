@@ -163,15 +163,15 @@ SOLE REVIVE
 
 ---
 
-### 6. Changelogs
-1st Commit - This was my very first push to GitHub after viewing a video from my lecturer and it enabled me to successfully commit my first change. Sadly, I had already completed my Index and Services webpages so I couldn't add any other changes to them besides the comments which will be shown later.
-2nd Commit - This was after I commenced the code of the about us page and luckily it didn't involve any complex tags, so it was all simple and manageable.
-3rd Commit - Here I discovered what fieldsets were and helpful they'd be quite impactful to the usability of my website.
-4th Commit - This is where I tried challenging myself and trying to input all the appropriate tags for the Service Information without any assistance after watching a tutorial video on YouTube, inevitably I failed and had to take a quick glance at the video just to fully get the hang of it.
-5th Commit - This was just me changing the website title of the Enquiry page.
-6th Commit - This was after I successfully added fictional organization's contact form in the Contact Us webpage.
-7th Commit - I successfully added a contact form to the Contact HTML code.
-8th Commit - Added multiple comments to the Contact Us HTML code.
-9th Commit - added multiple comments to the Index HTML code and added a bit of personality to the service names and descriptions to feel much more entertaining to customers.
-10th Commit - Here I actually added comments to the About Us, Services and Enquiries HTML codes but failed to commit them respectively and ended up only committing them as "Comments (About)".
-11th Commit - This was just me finalizing the look of the project and I added underlines to the "Services" headings on the Services HTML code.
+### 6.1 Changelogs(Part1)
+**1st Commit** - This was my very first push to GitHub after viewing a video from my lecturer and it enabled me to successfully commit my first change. Sadly, I had already completed my Index and Services webpages so I couldn't add any other changes to them besides the comments which will be shown later.
+**2nd Commit** - This was after I commenced the code of the about us page and luckily it didn't involve any complex tags, so it was all simple and manageable.
+**3rd Commit** - Here I discovered what fieldsets were and helpful they'd be quite impactful to the usability of my website.
+**4th Commit** - This is where I tried challenging myself and trying to input all the appropriate tags for the Service Information without any assistance after watching a tutorial video on YouTube, inevitably I failed and had to take a quick glance at the video just to fully get the hang of it.
+**5th Commit** - This was just me changing the website title of the Enquiry page.
+**6th Commit** - This was after I successfully added fictional organization's contact form in the Contact Us webpage.
+**7th Commit** - I successfully added a contact form to the Contact HTML code.
+**8th Commit** - Added multiple comments to the Contact Us HTML code.
+**9th Commit** - added multiple comments to the Index HTML code and added a bit of personality to the service names and descriptions to feel much more entertaining to customers.
+**10th Commit** - Here I actually added comments to the About Us, Services and Enquiries HTML codes but failed to commit them respectively and ended up only committing them as "Comments (About)".
+**11th Commit** - This was just me finalizing the look of the project and I added underlines to the "Services" headings on the Services HTML code.
