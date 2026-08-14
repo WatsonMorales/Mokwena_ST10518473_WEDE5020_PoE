@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Web Page</title>
+    <title>SOLE REVIVE | Premium Shoe Cleaning</title>
 </head>
 <body>
     <header>
@@ -18,22 +18,70 @@
         </nav>
     </header>
     <main>
-    <section>
-            <p>CONTACT SOLE REVIVE</p>
-        <h1>Let's Talk About Your Shoes.</h1>
-            <p>do want to ask about our services? Get in touch with SOLE REVIVE and our team will be happy to assist you.</p>
-    </section>
-    <section>
-        <h2>Contact Information</h2>
-        <address>
-            <p><strong>Business:</strong> SOLE REVIVE</p>
-            <p><strong>Location:</strong> Mamelodi, Pretoria, South Africa</p>
-            <p><strong>Phone:</strong> <a href="tel:+27123456767">012 345 6767</a></p>
-            <p><strong>Email:</strong> <a href="info@solerevive.co.za">info@solerevive.co.za</a></p>
-        </address>
-    </section>
-    <footer>
-        <p> &copy; 2026 SOLE REVIVE. All Rights Reserved.</p>
-    </footer>
+        <section>
+                <p>CONTACT SOLE REVIVE</p>
+            <h1>Let's Talk About Your Shoes.</h1>
+                <p>do want to ask about our services? Get in touch with SOLE REVIVE and our team will be happy to assist you.</p>
+        </section>
+        <section>
+            <h2>Contact Information</h2><!-- These are totally fictional -->
+            <address>
+                <p><strong>Business:</strong> SOLE REVIVE</p>
+                <p><strong>Location:</strong> Mamelodi, Pretoria, South Africa</p>
+                <p><strong>Phone:</strong> <a href="tel:+27123456767">012 345 6767</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@solerevive.co.za">info@solerevive.co.za</a></p>
+            </address>
+        </section>
+        <section>
+                <h2>Our Locations</h2>
+            <article>
+                <h3>Mamelodi</h3>
+                    <p>Our primary services are located in the Mamelodi area, Pretoria.</p>
+            </article>
+            <article>
+                <h3>Pretoria East</h3>
+                    <p>Services can also be arranged for customers in selected surrounding areas.</p>
+            </article>
+        </section>
+        <section>
+                <h2>Send Us a Message</h2>
+            <form action="mailto:info@solerevive.co.za" method="post" enctype="text/plain">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <label for="name">Full Name:</label>
+                    <br>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+                    <label for="contact-email">Email Address:</label>
+                    <br>
+                    <input type="email" id="contact-email" name="email" required>
+                    <br><br>
+                    <label for="contact-phone">Phone Number:</label>
+                    <br>
+                    <input type="tel" id="contact-phone" name="phone">
+                    <br><br>
+                    <label for="subject">Message Type:</label>
+                    <br>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Select Message Type --</option>
+                        <option value="general">General Enquiry</option>
+                        <option value="service">Service Question</option>
+                        <option value="booking">Booking Question</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                    <br><br>
+                    <label for="contact-message">Message:</label>
+                    <br>
+                    <textarea id="contact-message" name="message" rows="7" cols="40" required></textarea>
+                    <br><br>
+                    <input type="submit" value="Send Message">
+                    <input type="reset" value="Clear Form">
+                </fieldset>
+            </form>
+        </section>
+        <footer>
+            <p> &copy; 2026 SOLE REVIVE. All Rights Reserved.</p>
+        </footer>
+    </main>
 </body>
 </html>
