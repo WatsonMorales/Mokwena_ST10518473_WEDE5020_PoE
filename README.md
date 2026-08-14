@@ -175,3 +175,15 @@ SOLE REVIVE
 **9th Commit** - added multiple comments to the Index HTML code and added a bit of personality to the service names and descriptions to feel much more entertaining to customers.
 **10th Commit** - Here I actually added comments to the About Us, Services and Enquiries HTML codes but failed to commit them respectively and ended up only committing them as "Comments (About)".
 **11th Commit** - This was just me finalizing the look of the project and I added underlines to the "Services" headings on the Services HTML code.
+
+
+---
+
+### 7. References
+- CodingOne(2021), How to add Fieldset in HTML | | Web development [Online Video], Available at:<https://www.youtube.com/watch?v=MHw7Fj8msBE> (Accessed: 14 August 2026)
+- Legends Barber, 2026. Africa's #1 Barbershop. [Online] Available at: https://www.legends-barber.com/ [Accessed 14 August 2026].
+- Register Domain SA, 2025. Understanding The Costs Of Domain Registration And Hosting In South Africa. [Online] Available at: https://www.registerdomain.co.za/blog/domain-hosting-costs-south-africa/ [Accessed 14 August 2026].
+- The Independent Institute of Education, 2026. PoE: Part1 - Building the Foundation: Project Initiation and Planning, Pretoria: The Independent Institute of Education.
+- The Sneaker Shack, 2026. The Sneaker Shack. [Online] Available at: https://thesneakershack.co.za/ [Accessed 14 August 2026].
+- Vowel Designs, 2023. Shoe Carnival’s New Recruitment Website. [Online] Available at: https://www.vowelsdesigns.com/shoe-carnivals-new-recruitment-website/ [Accessed 14 August 2026].
+
