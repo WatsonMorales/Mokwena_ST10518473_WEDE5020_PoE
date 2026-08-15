@@ -17,9 +17,10 @@ This is the building of a website dedicated to a small shoe cleaning business na
 
 ## 1. Project Overview
 
-Mamelodi fresh cuts is a Fictional Organisation and is a proposed small barbering business based in Mamelodi and the business offers exceptional quality haircuts. They are affordable and accessible to all age groups.
-They have a mission of providing reliable grooming services and wish to meet the desired standards of all customers. They have a visions of establishing a reputable local grooming brand.
-The target audience is people of all age as they accommodate everyone for the sole exception of children aged 1year old and below.
+SOLE REVIVE is a proposed Fictional small business created solely for the purpose of this website development project. I have positioned the organisation as a premium shoe cleaning company and footwear care that was founded in Mamelodi, Pretoria. The business is affordable and focused on customer satisfaction and provides the local accessibility with premium services.
+The mission for SOLE REVIVE is to be able to provide high quality shoe cleaning services all while it helps its customers retain the longevity and good condition of their shoes.
+SOLE REVIVE’s target audience includes sneaker enthusiasts, young professionals, students and all who find them self unable to take proper care of the footwear due to Day-to-Day responsibilities. SOLE REVIVE is always there to help.
+
 
 
 ---
