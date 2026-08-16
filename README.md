@@ -4,8 +4,8 @@ This is the building of a website dedicated to a small shoe cleaning business na
 
 ## Student Information
 
-**Student Name:** [Your Full Name]  
-**Student Number:** [Your Student Number]  
+**Student Name:** Thsimao Watson Mokwena  
+**Student Number:** ST10518473
 **Module:** WEDE5020  
 **Project:** Website Development Portfolio of Evidence  
 **Organisation:** SOLE REVIVE  
