@@ -123,19 +123,24 @@ main > section:last-child {
 
 /* ---- Header & Navigation ---- */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem var(--spacing-md);
     border-bottom: 0.5px solid var(--color-border);
     background-color: var(--color-bg);
 }
 
 header nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.25rem var(--spacing-md);
+    flex: 1;
 }
 
 header nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 2rem;
     flex-wrap: wrap;
 }
@@ -387,7 +392,7 @@ main a:not(header a):not(footer a):hover {
     color: var(--color-accent);
 }
 
-/* Primary CTA style — first link in the hero section */
+/* Primary CTA style */
 section:first-of-type a:first-of-type {
     background-color: var(--color-accent);
     color: #FFFFFF;
@@ -432,11 +437,299 @@ footer nav a:hover {
     color: var(--color-accent);
 }
 
-/* Keep the logo neatly positioned on smaller screens */
+/* Keeps the logo neatly positioned on smaller screens */
 @media screen and (max-width: 600px) {
     .site-logo {
         top: 0.75rem;
         left: 0.75rem;
         width: 80px;
+    }
+}
+
+/* ---- Hero Section ----
+   The hero section is the first section on the homepage, and it has a few
+   decorative elements that fade out as the user scrolls down. */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero > div,
+.hero > * :not(.hero-smudge) {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-smudge {
+    position: absolute;
+    display: block;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.55;
+    z-index: 0;
+    pointer-events: none;
+    animation: smudge-fade linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 60vh;
+}
+
+.smudge-1 {
+    top: -60px;
+    left: 5%;
+    background-color: #E24B4A; /* red */
+}
+
+.smudge-2 {
+    top: 20px;
+    right: 10%;
+    background-color: #378ADD; /* blue */
+}
+
+.smudge-3 {
+    bottom: -40px;
+    left: 25%;
+    background-color: #EF9F27; /* yellow/orange */
+}
+
+.smudge-4 {
+    bottom: -20px;
+    right: 5%;
+    background-color: #1D9E75; /* green */
+}
+
+@keyframes smudge-fade {
+    from {
+        opacity: 0.55;
+        transform: scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.4) translateY(-40px);
+    }
+}
+
+/* ---- Entrance animation for each section as the page loads ---- */
+main > section {
+    animation: fade-up 0.7s ease both;
+}
+
+main > section:nth-of-type(1) { animation-delay: 0s; }
+main > section:nth-of-type(2) { animation-delay: 0.1s; }
+main > section:nth-of-type(3) { animation-delay: 0.2s; }
+main > section:nth-of-type(4) { animation-delay: 0.3s; }
+main > section:nth-of-type(5) { animation-delay: 0.4s; }
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reduced motion: respect user preference */
+@media (prefers-reduced-motion: reduce) {
+    .hero-smudge {
+        animation: none;
+        opacity: 0.2;
+    }
+
+    main > section {
+        animation: none;
+    }
+
+    article,
+    a,
+    input,
+    select,
+    textarea {
+        transition: none;
+    }
+}
+
+/* Card grid: used to lay out groups of <article> cards (services,
+   locations, etc.) separately from their section heading. Single
+   column by default for a clean, full-width stacked look. */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.card-grid article {
+    margin-bottom: 0;
+}
+
+/*  Gallery  */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.gallery-grid figure {
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--color-bg-soft);
+    border: 0.5px solid var(--color-border);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-grid figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(26, 26, 26, 0.08);
+}
+
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-grid figure:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-grid figcaption {
+    padding: 0.75rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+/* Animated gradient heading */
+.gradient-text {
+    background: linear-gradient(90deg, #E24B4A, #EF9F27, #1D9E75, #378ADD, #E24B4A);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 8s linear infinite;
+}
+
+@keyframes gradient-shift {
+    to {
+        background-position: 300% center;
+    }
+}
+
+/* Floating colour blobs behind the intro heading */
+.gallery-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-blob {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    filter: blur(45px);
+    opacity: 0.35;
+    z-index: 0;
+    animation: blob-float 9s ease-in-out infinite;
+}
+
+.gallery-hero p,
+.gallery-hero h1 {
+    position: relative;
+    z-index: 1;
+}
+
+.blob-1 {
+    width: 180px;
+    height: 180px;
+    top: -40px;
+    left: 8%;
+    background-color: #E24B4A;
+    animation-delay: 0s;
+}
+
+.blob-2 {
+    width: 150px;
+    height: 150px;
+    top: 10px;
+    right: 12%;
+    background-color: #378ADD;
+    animation-delay: 1.5s;
+}
+
+.blob-3 {
+    width: 130px;
+    height: 130px;
+    bottom: -50px;
+    left: 40%;
+    background-color: #EF9F27;
+    animation-delay: 3s;
+}
+
+@keyframes blob-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(15px, -20px) scale(1.1); }
+}
+
+/* Colour-cycled top accent on each gallery card, using the paint-splatter palette */
+.gallery-grid figure {
+    border-top: 4px solid transparent;
+}
+
+.gallery-grid figure:nth-child(4n+1) { border-top-color: #E24B4A; }
+.gallery-grid figure:nth-child(4n+2) { border-top-color: #378ADD; }
+.gallery-grid figure:nth-child(4n+3) { border-top-color: #EF9F27; }
+.gallery-grid figure:nth-child(4n+4) { border-top-color: #1D9E75; }
+
+/* Playful hover: lift, slight tilt, colourful glow matching the card's accent */
+.gallery-grid figure {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid figure:nth-child(4n+1):hover { box-shadow: 0 14px 28px rgba(226, 75, 74, 0.25); }
+.gallery-grid figure:nth-child(4n+2):hover { box-shadow: 0 14px 28px rgba(55, 138, 221, 0.25); }
+.gallery-grid figure:nth-child(4n+3):hover { box-shadow: 0 14px 28px rgba(239, 159, 39, 0.25); }
+.gallery-grid figure:nth-child(4n+4):hover { box-shadow: 0 14px 28px rgba(29, 158, 117, 0.25); }
+
+.gallery-grid figure:hover {
+    transform: translateY(-6px) rotate(-0.5deg);
+}
+
+.gallery-grid figure:nth-child(even):hover {
+    transform: translateY(-6px) rotate(0.5deg);
+}
+
+/* Staggered entrance for gallery items as the page loads */
+.gallery-grid figure {
+    animation: fade-up 0.6s ease both;
+}
+
+.gallery-grid figure:nth-child(1) { animation-delay: 0.05s; }
+.gallery-grid figure:nth-child(2) { animation-delay: 0.1s; }
+.gallery-grid figure:nth-child(3) { animation-delay: 0.15s; }
+.gallery-grid figure:nth-child(4) { animation-delay: 0.2s; }
+.gallery-grid figure:nth-child(5) { animation-delay: 0.25s; }
+.gallery-grid figure:nth-child(6) { animation-delay: 0.3s; }
+
+/* Reduced motion: disable the gallery's decorative animation on request */
+@media (prefers-reduced-motion: reduce) {
+    .gradient-text {
+        animation: none;
+        background: none;
+        -webkit-background-clip: initial;
+        background-clip: initial;
+        color: var(--color-text);
+    }
+
+    .gallery-blob {
+        animation: none;
+    }
+
+    .gallery-grid figure {
+        animation: none;
     }
 }
