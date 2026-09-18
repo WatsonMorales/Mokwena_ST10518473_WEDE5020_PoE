@@ -61,6 +61,51 @@ body {
     display: block;
 }
 
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 2.25rem;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+/* Small uppercase label style (used above headings, e.g. "OUR SERVICES") */
+.eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+
 /* Keep the logo neatly positioned on smaller screens */
 @media screen and (max-width: 600px) {
     .site-logo {
