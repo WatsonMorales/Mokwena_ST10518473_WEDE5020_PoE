@@ -35,3 +35,37 @@ ul, ol {
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 }
+
+/* ---- Base Styles ---- */
+body {
+    font-family: var(--font-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ---- Sole Revive Logo ---- */
+.site-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    width: 110px;
+    height: auto;
+    z-index: 10;
+}
+
+.site-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Keep the logo neatly positioned on smaller screens */
+@media screen and (max-width: 600px) {
+    .site-logo {
+        top: 0.75rem;
+        left: 0.75rem;
+        width: 80px;
+    }
+}
