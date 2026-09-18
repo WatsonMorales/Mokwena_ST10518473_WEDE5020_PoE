@@ -400,6 +400,38 @@ section:first-of-type a:first-of-type:hover {
     color: #FFFFFF;
 }
 
+/* ---- Footer ---- */
+footer {
+    background-color: var(--color-bg-soft);
+    border-top: 0.5px solid var(--color-border);
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    max-width: none;
+    margin-bottom: 0.25rem;
+}
+
+footer nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+footer nav a {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+}
+
+footer nav a:hover {
+    color: var(--color-accent);
+}
+
 /* Keep the logo neatly positioned on smaller screens */
 @media screen and (max-width: 600px) {
     .site-logo {
