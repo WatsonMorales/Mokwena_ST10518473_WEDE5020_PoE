@@ -214,6 +214,136 @@ section:first-of-type a:first-of-type:hover {
 }
 
 
+/* ---- Articles / Service Cards ---- */
+article {
+    background-color: var(--color-bg-soft);
+    border: 0.5px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ---- Lists ---- */
+main ul li,
+main ol li {
+    color: var(--color-text-secondary);
+    padding-left: 1.1rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+}
+
+main ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+}
+
+main ol {
+    counter-reset: step;
+}
+
+main ol li {
+    padding-left: 1.75rem;
+}
+
+main ol li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+/* ---- Forms ---- */
+form {
+    max-width: 600px;
+}
+
+fieldset {
+    border: 0.5px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+legend {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    padding: 0 0.5rem;
+    color: var(--color-text);
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    font-family: var(--font-base);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-bg);
+    margin-bottom: 0.5rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+input[type="submit"],
+input[type="reset"] {
+    font-family: var(--font-base);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    cursor: pointer;
+    margin-right: 0.75rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+input[type="submit"] {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #FFFFFF;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+}
+
+input[type="reset"]:hover {
+    border-color: var(--color-text-secondary);
+}
+
+
 /* Keep the logo neatly positioned on smaller screens */
 @media screen and (max-width: 600px) {
     .site-logo {
