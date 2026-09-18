@@ -163,8 +163,8 @@ SOLE REVIVE
 
 
 ---
-
 ### 6.1 Changelogs(Part1)
+
 **1st Commit** - This was my very first push to GitHub after viewing a video from my lecturer and it enabled me to successfully commit my first change. Sadly, I had already completed my Index and Services webpages so I couldn't add any other changes to them besides the comments which will be shown later.
 **2nd Commit** - This was after I commenced the code of the about us page and luckily it didn't involve any complex tags, so it was all simple and manageable.
 **3rd Commit** - Here I discovered what fieldsets were and helpful they'd be quite impactful to the usability of my website.
@@ -177,6 +177,46 @@ SOLE REVIVE
 **10th Commit** - Here I actually added comments to the About Us, Services and Enquiries HTML codes but failed to commit them respectively and ended up only committing them as "Comments (About)".
 **11th Commit** - This was just me finalizing the look of the project and I added underlines to the "Services" headings on the Services HTML code.
 
+
+### 6.2 Changelogs(Part2)
+- HTML corrections following Part 1 feedback:
+- Added missing <!DOCTYPE html> and <html> wrapper to index.html and services.html (previously rendering in quirks mode).
+- Fixed a broken closing tag on services.html.
+- Added <meta charset="UTF-8"> and the responsive viewport meta tag to every page.
+- Replaced table-based navigation with a semantic ul/li list on all pages.
+- Removed deprecated bgcolor attributes in favour of CSS.
+- Corrected a stray unclosed <div> on index.html and moved contact.html's <footer> outside of <main>.
+  
+### CSS Styling
+
+- Created css/style.css and linked it to every page.
+- Established a base reset, colour system (CSS custom properties), and typography scale.
+- Built layout using Flexbox (homepage hero, header) and CSS Grid (.card-grid for service/location cards, .gallery-grid for the photo gallery).
+- Styled forms, buttons, navigation, and footer consistently across the site using the cascade rather than one-off classes.
+  
+### CSS Styling
+
+- Added tablet (≤1024px) and mobile (≤600px) breakpoints via media queries.
+- Mobile navigation collapses to a stacked list; the hero and card grids switch from multi-column to single-column; buttons and form controls become full-width for touch.
+
+### Animation:
+
+- Added a scroll-driven colour effect to the homepage hero (CSS animation-timeline: scroll()), fading four decorative colour smudges as the visitor scrolls — confined to the homepage only, to preserve the clean look on every other page.
+- Added staggered fade-up entrance animation for page sections, and hover-lift animation for service cards and buttons.
+- All animation respects prefers-reduced-motion.
+
+### New page — Gallery:
+
+- Added gallery.html as a sixth page (documented here as required, since it exceeds the minimum of five).
+- Added a responsive photo grid (.gallery-grid) with hover zoom and colour-cycled card accents.
+- Given a deliberately more vibrant treatment than the rest of the site: an animated gradient heading, floating colour blobs, and colour-cycled card borders — while the rest of the site retains the clean, white, premium base styling.
+- Updated navigation (header and footer) on all pages to include the Gallery link.
+
+### Bug fixes:
+
+- Fixed a layout bug where .card-grid styling was being applied to entire <section> elements (including headings) instead of just the card containers, causing misaligned grids.
+- Fixed an invalid nested <section> structure on gallery.html that was preventing the intro, grid, and CTA sections from receiving their intended spacing (a main > section selector requires direct children).
+- Replaced an absolutely-positioned logo (which had no positioned parent and could overlap page content) with a Flexbox-based header layout, and removed several accidentally duplicated CSS rule blocks.
 
 ---
 
