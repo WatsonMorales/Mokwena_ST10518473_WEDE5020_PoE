@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOLE REVIVE | Premium Shoe Cleaning</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body bgcolor="Beige">
+<body>
     <header>
         <a href="index.html" class="site-logo">
             <img src="images/Logo.png" alt="Sole Revive Logo">
@@ -15,6 +15,9 @@
             <a href="index.html">SOLE REVIVE</a>
             <h2>SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</h2>
         </div>
+        <!--Mobile menu button (CSS-only toggle, shown on small screens)-->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"></label>
         <nav>
             <!--Main Navigation-->
             <ul>
@@ -22,7 +25,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
@@ -45,6 +48,7 @@
         </section>
         <section>
                 <h2>Our Locations</h2>
+            <div class="card-grid">
             <article>
                 <h3>Mamelodi</h3>
                     <p>Our primary services are located in the Mamelodi area, Pretoria.</p>
@@ -53,6 +57,7 @@
                 <h3>Pretoria East</h3>
                     <p>Services can also be arranged for customers in selected surrounding areas.</p>
             </article>
+            </div>
         </section>
         <!--This section includes the creation of the contact form that will be presented to interested customers-->
         <section>
@@ -91,10 +96,19 @@
                 </fieldset>
             </form>
         </section>
-        <!--Copyrights-->
-        <footer>
-            <p> &copy; 2026 SOLE REVIVE. All Rights Reserved.</p>
-        </footer>
     </main>
+    <!--Copyrights-->
+    <footer>
+        <p>&copy; 2026 SOLE REVIVE. All Rights Reserved.</p>
+        <p>Mamelodi, Pretoria, South Africa</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </footer>
 </body>
 </html>

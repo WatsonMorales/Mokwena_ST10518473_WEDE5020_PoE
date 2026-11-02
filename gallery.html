@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | SOLE REVIVE</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <header>
         <a href="index.html" class="site-logo">
             <img src="images/Logo.png" alt="Sole Revive Logo">
         </a>
+        <div class="branding">
+            <a href="index.html">SOLE REVIVE</a>
+            <h2>SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</h2>
+        </div>
+        <!--Mobile menu button (CSS-only toggle, shown on small screens)-->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"></label>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,20 +25,19 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <section class="gallery-hero">
+        <section class="gallery-hero">
             <span class="gallery-blob blob-1" aria-hidden="true"></span>
             <span class="gallery-blob blob-2" aria-hidden="true"></span>
             <span class="gallery-blob blob-3" aria-hidden="true"></span>
             <p>SEE THE RESULTS</p>
             <h1 class="gradient-text">Our Gallery.</h1>
             <p>A collection of shoes we've brought back to life. Every pair tells a
-                before-and-after story. Browse a few of our favourite transformations below.</p></p>
+                before-and-after story. Browse a few of our favourite transformations below.</p>
         </section>
 
         <section>
@@ -50,7 +56,7 @@
                 </figure>
                 <figure>
                     <img src="images/Adimule Slides.avif" alt="Adimule Slides" loading="lazy">
-                    <figcaption>Adimule Sildes</figcaption>
+                    <figcaption>Adimule Slides</figcaption>
                 </figure>
                 <figure>
                     <img src="images/JORDAN+TATUM+3.avif" alt="Jordan Jayden Tatum" loading="lazy">
