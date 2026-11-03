@@ -3,17 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLE REVIVE | Premium Shoe Cleaning</title>
+    <title>SOLE REVIVE | Premium Sneaker Cleaning in Mamelodi, Pretoria</title>
+    <meta name="description" content="Professional sneaker and shoe cleaning in Mamelodi, Pretoria. Standard clean, deep clean, sole care and premium shoe care. Get your free quote today.">
+    <meta name="keywords" content="sneaker cleaning Mamelodi, shoe cleaning Pretoria, sneaker restoration, deep clean sneakers, sole care, premium shoe care, Sole Revive, sneaker cleaning service">
+    <meta name="author" content="SOLE REVIVE">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#B5533C">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https://cdnjs.cloudflare.com https://*.tile.openstreetmap.org https://*.tile.openstreetmap.fr; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <link rel="canonical" href="https://sole-revive.netlify.app/">
+    <link rel="icon" type="image/png" href="images/sole-revive-logo.png">
+    <!-- Open Graph / Twitter: how the page looks when shared on social media -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SOLE REVIVE">
+    <meta property="og:title" content="SOLE REVIVE | Premium Sneaker Cleaning in Mamelodi, Pretoria">
+    <meta property="og:description" content="Professional sneaker and shoe cleaning in Mamelodi, Pretoria. Standard clean, deep clean, sole care and premium shoe care. Get your free quote today.">
+    <meta property="og:url" content="https://sole-revive.netlify.app/">
+    <meta property="og:image" content="https://sole-revive.netlify.app/images/clean-nike-air-force-1-after-cleaning.webp">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SOLE REVIVE | Premium Sneaker Cleaning in Mamelodi, Pretoria">
+    <meta name="twitter:description" content="Professional sneaker and shoe cleaning in Mamelodi, Pretoria. Standard clean, deep clean, sole care and premium shoe care. Get your free quote today.">
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Mamelodi, Pretoria">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/main.js" defer></script>
+    <!-- Structured data for local search (Google "LocalBusiness") -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SOLE REVIVE",
+      "description": "Professional premium shoe and sneaker cleaning in Mamelodi, Pretoria.",
+      "url": "https://sole-revive.netlify.app/",
+      "image": "https://sole-revive.netlify.app/images/sole-revive-logo.png",
+      "telephone": "+27123456767",
+      "email": "info@solerevive.co.za",
+      "address": { "@type": "PostalAddress", "addressLocality": "Mamelodi", "addressRegion": "Gauteng", "addressCountry": "ZA" },
+      "geo": { "@type": "GeoCoordinates", "latitude": -25.710139, "longitude": 28.381444 },
+      "areaServed": ["Mamelodi", "Pretoria East"],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header>
             <a href="index.html" class="site-logo">
-            <img src="images/Logo.png" alt="Sole Revive Logo">
+            <img src="images/sole-revive-logo.png" alt="Sole Revive Logo">
         </a>
         <div class="branding">
             <a href="index.html">SOLE REVIVE</a>
-            <h2>SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</h2>
+            <p class="tagline">SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</p>
         </div>
         <!--Mobile menu button (CSS-only toggle, shown on small screens)-->
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
@@ -30,16 +74,15 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <section class="hero">
-            <!--Decorative colour smudges: fade out as the visitor scrolls, and i made this so
-             it kind of resembles the cleaning process-->
+            <!--Decorative colour smudges: fade out as the visitor scrolls, resembling our cleaning process-->
             <span class="hero-smudge smudge-1" aria-hidden="true"></span>
             <span class="hero-smudge smudge-2" aria-hidden="true"></span>
             <span class="hero-smudge smudge-3" aria-hidden="true"></span>
             <span class="hero-smudge smudge-4" aria-hidden="true"></span>
             <div>
-            <p>PREMIUM SHOE CARE ~ MAMEMLODI</p>
+            <p>PREMIUM SHOE CARE ~ MAMELODI</p>
                 <h1>
                     Give Your Sneakers
                     <br>
@@ -49,16 +92,27 @@
                     Detailed shoe cleaning and care services designed
                     to restore your favourite lefties and righties (Shoes).
             </p>
+            <!--Typewriter line: script cycles the highlighted shoe names-->
+            <p class="hero-typed" aria-label="We revive Air Force 1s, Jordans, Adidas Campus, Timberlands and Asics GELs.">
+                <span aria-hidden="true">We revive: <span class="typed-text" data-phrases="Air Force 1s|Jordans|Adidas Campus|Timberlands|Asics GELs|Your favourite pair">Air Force 1s</span><span class="typed-caret">|</span></span>
+            </p>
                 <!--Main Call to action-->
                 <a href="enquiry.html">Book a Cleaning</a>
                 <a href="services.html">View Our Services</a>
             </div>
             <div>
                 <!--Hero Image-->
-                <img src="images/Dirty Air force 1.webp" alt="Pair of dirty Nike Air Force 1 sneakers before cleaning"><!--Before the expert cleaning service from sole revive-->
-                <img src="images/Clean Air Foprce one.webp" alt="Pair of clean Nike Air Force 1 sneakers after cleaning"><!--After the expert cleaning service from sole revive-->
+                <img src="images/dirty-nike-air-force-1-before-cleaning.webp" alt="Pair of dirty Nike Air Force 1 sneakers before cleaning" width="474" height="338" fetchpriority="high"><!--Before the expert cleaning service from sole revive-->
+                <img src="images/clean-nike-air-force-1-after-cleaning.webp" alt="Pair of clean Nike Air Force 1 sneakers after cleaning" width="474" height="338" fetchpriority="high"><!--After the expert cleaning service from sole revive-->
             </div>
         </section> 
+        <!--Decorative scrolling brand strip-->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>NIKE</span><span>ADIDAS</span><span>JORDAN</span><span>ASICS</span><span>TIMBERLAND</span><span>YEEZY</span><span>NEW BALANCE</span><span>PUMA</span>
+                <span>NIKE</span><span>ADIDAS</span><span>JORDAN</span><span>ASICS</span><span>TIMBERLAND</span><span>YEEZY</span><span>NEW BALANCE</span><span>PUMA</span>
+            </div>
+        </div>
         <section>
             <p>WHY SOLE REVIVE?</p>
             <h2>
@@ -125,6 +179,15 @@
                 <li>We're a super convenient local service in Mamelodi</li>
                 <li>We've got customer-focused experience</li>
             </ul>
+        </section>
+        <!--Shoe care tips: tabs + random tip are built by js/main.js-->
+        <section id="care-tips">
+            <p>SHOE CARE TIPS</p>
+            <h2>Make your fresh pair last longer.</h2>
+            <p>Pick your shoe material for quick care advice from the SOLE REVIVE team.</p>
+            <div id="care-tips-app">
+                <noscript><p>Turn on JavaScript to browse our shoe care tips by material.</p></noscript>
+            </div>
         </section>
         <section>
             <h2>
