@@ -1,0 +1,8 @@
+# SOLE REVIVE - instructions for search engine crawlers
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /CSS/
+
+# Replace with your real deployed address
+Sitemap: https://sole-revive.netlify.app/sitemap.xml
