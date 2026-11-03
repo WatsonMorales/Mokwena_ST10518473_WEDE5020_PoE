@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLE REVIVE | Premium Shoe Cleaning</title>
+    <title>Get a Sneaker Cleaning Quote | SOLE REVIVE Mamelodi</title>
+    <meta name="description" content="Request an instant sneaker cleaning quote from SOLE REVIVE. Choose your service, add extras, pick a date and see your price and ready date straight away.">
+    <meta name="keywords" content="sneaker cleaning quote, book shoe cleaning, shoe cleaning enquiry, sneaker cleaning booking Mamelodi, shoe cleaning price Pretoria">
+    <meta name="author" content="SOLE REVIVE">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#B5533C">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https://cdnjs.cloudflare.com https://*.tile.openstreetmap.org https://*.tile.openstreetmap.fr; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <link rel="canonical" href="https://sole-revive.netlify.app/enquiry.html">
+    <link rel="icon" type="image/png" href="images/sole-revive-logo.png">
+    <!-- Open Graph / Twitter: how the page looks when shared on social media -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SOLE REVIVE">
+    <meta property="og:title" content="Get a Sneaker Cleaning Quote | SOLE REVIVE Mamelodi">
+    <meta property="og:description" content="Request an instant sneaker cleaning quote from SOLE REVIVE. Choose your service, add extras, pick a date and see your price and ready date straight away.">
+    <meta property="og:url" content="https://sole-revive.netlify.app/enquiry.html">
+    <meta property="og:image" content="https://sole-revive.netlify.app/images/services/standard-sneaker-cleaning-service.webp">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Get a Sneaker Cleaning Quote | SOLE REVIVE Mamelodi">
+    <meta name="twitter:description" content="Request an instant sneaker cleaning quote from SOLE REVIVE. Choose your service, add extras, pick a date and see your price and ready date straight away.">
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Mamelodi, Pretoria">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header>
        <a href="index.html" class="site-logo">
-            <img src="images/Logo.png" alt="Sole Revive Logo">
+            <img src="images/sole-revive-logo.png" alt="Sole Revive Logo">
         </a>
         <div class="branding">
             <a href="index.html">SOLE REVIVE</a>
-            <h2>SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</h2>
+            <p class="tagline">SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</p>
         </div>
         <!--Mobile menu button (CSS-only toggle, shown on small screens)-->
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
@@ -31,7 +55,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <section>
             <!--Call to action-->
                 <p>GET IN TOUCH</p>
@@ -40,54 +64,60 @@
                    our team will provide ypu with more information about all the available 
                    cleaning options for your babies.</p>
         </section>
-        <!--Utilisation of fieldsets-->
+        <!--Enquiry form. Validation, instant quote and AJAX submit are handled in js/main.js.
+            data-netlify lets the form work with Netlify Forms once deployed.-->
         <section>
             <h2>Service Enquiry Form</h2>
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label for="fullname">Full Name:</label>
-                    <br>
-                <input type="text" id="fullname" name="fullname" required>
-                    <br><br>
-                <label for="email">Email Address:</label>
-                    <br>
-                <input type="email" id="email" name="email" required>
-                    <br><br>
-                <label for="phone">Phone Number:</label>
-                    <br>
-                <input type="tel" id="phone" name="phone" required>
-                    <br><br>
-            </fieldset>
-            <fieldset>
-                <legend>Service Information</legend>
-                <label for="service">Select a Service:</label>
-                    <br>
-                <select id="service" name="service" required>
-                    <option value="">-- Select a Service --</option>
-                    <option value="standard-clean">Standard Sneaker Clean</option>
-                    <option value="deep-clean">Deep Clean</option>
-                    <option value="sole-care">Sole Care</option>
-                    <option value="premium-care">Premium Shoe Care</option>
-                </select>
-                    <br><br>
-                <label for="shoes">Type of Footwear:</label>
-                <br>
-                <input type="text" id="shoes" name="shoes" placeholder="e.g. Nike Air Force 1" required>
-                    <br><br>
-                <label for="quantity">Number of Pairs:</label><br>
-                <input type="number" id="quantity" name="quantity" min="1" required>
-                <br><br>
-                <label for="date">Preferred Service Date:</label><br>
-                <input type="date" id="date" name="date">
-                <br><br>
-                <label for="message">Additional Information:</label>
-                <br>
-                <textarea id="message" name="message" rows="6" cols="40" placeholder="Tell us about the condition of your shoes or any specific requirements."></textarea><br><br>
-            </fieldset>
-            <input type="submit" value="Submit Enquiry">
-            <input type="reset" value="Clear Form">
-        </form>
+            <form id="enquiry-form" name="enquiry" action="enquiry.html" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="enquiry">
+                    <label>Leave this empty: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+                </p>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" autocomplete="name" maxlength="60" required>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 012 345 6789" maxlength="20" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Service Information</legend>
+                    <label for="service">Select a Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="standard-clean">Standard Sneaker Clean (from R120)</option>
+                        <option value="deep-clean">Deep Clean (from R220)</option>
+                        <option value="sole-care">Sole Care (from R150)</option>
+                        <option value="premium-care">Premium Shoe Care (from R350)</option>
+                    </select>
+                    <label for="shoes">Type of Footwear:</label>
+                    <input type="text" id="shoes" name="shoes" placeholder="e.g. Nike Air Force 1" maxlength="60" required>
+                    <label for="quantity">Number of Pairs (1 to 20):</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="20" step="1" inputmode="numeric" required>
+                    <label for="date">Preferred Drop-off Date (optional):</label>
+                    <input type="date" id="date" name="date">
+                    <label for="message">Additional Information:</label>
+                    <textarea id="message" name="message" rows="5" maxlength="500" placeholder="Tell us about the condition of your shoes or any specific requirements."></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>How would you like to get your shoes to us?</legend>
+                    <label class="choice choice-radio"><input type="radio" name="delivery" value="dropoff" checked> <span>I will drop off and collect <em>(free)</em></span></label>
+                    <label class="choice choice-radio"><input type="radio" name="delivery" value="collect"> <span>Collection and delivery <em>(+R40)</em></span></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Optional extras (per pair)</legend>
+                    <label class="choice"><input type="checkbox" name="addons" value="waterproof"> <span>Water-repellent coating <em>(+R50)</em></span></label>
+                    <label class="choice"><input type="checkbox" name="addons" value="laces"> <span>Fresh lace replacement <em>(+R30)</em></span></label>
+                    <label class="choice"><input type="checkbox" name="addons" value="whiten"> <span>Midsole whitening <em>(+R40)</em></span></label>
+                </fieldset>
+                <label class="choice choice-consent"><input type="checkbox" id="consent" name="consent" value="yes" required> <span>I agree that SOLE REVIVE may contact me about this enquiry (POPIA).</span></label>
+                <input type="submit" value="Submit Enquiry">
+                <input type="reset" value="Clear Form">
+            </form>
+
+            <!--The quote is shown here after a valid submission-->
+            <div id="enquiry-response" class="response-card" tabindex="-1" role="region" aria-labelledby="response-title" hidden></div>
         </section>
         <!--order placement process explained-->
         <section>
