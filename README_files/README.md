@@ -218,6 +218,25 @@ SOLE REVIVE
 - Fixed an invalid nested <section> structure on gallery.html that was preventing the intro, grid, and CTA sections from receiving their intended spacing (a main > section selector requires direct children).
 - Replaced an absolutely-positioned logo (which had no positioned parent and could overlap page content) with a Flexbox-based header layout, and removed several accidentally duplicated CSS rule blocks.
 
+### 6.3 Changelogs (Part 3)
+
+| Date | Change |
+|---|---|
+| 2 Nov 2026 | Added `js/main.js` containing all Part 3 JavaScript, loaded with `defer` on every page |
+| 2 Nov 2026 | **Interactive elements:** FAQ accordion on Services; tabbed care tips and random tip button on Home; modal quick-view for services |
+| 2 Nov 2026 | **Dynamic content and search:** services price list generated from a data list with live search, category filter and sort; skeleton loading state |
+| 2 Nov 2026 | **Gallery:** photos wrapped in buttons; added brand filter, search and sorting; built an accessible lightbox with keyboard, swipe and zoom |
+| 2 Nov 2026 | **Map:** added Leaflet and OpenStreetMap map to Contact with layers, pins, service-area circles, location cards that fly to a pin, and geolocation check |
+| 2 Nov 2026 | **Enquiry form:** added radio buttons (collection method), checkboxes (extras, consent), honeypot, `maxlength`, `autocomplete` and input modes; added full JavaScript validation with inline errors, live character counter and live price estimate |
+| 2 Nov 2026 | **Enquiry response:** quote, discount, availability and ready date shown after submission; AJAX submit through `fetch`; added `data-netlify` so Netlify Forms can store submissions |
+| 2 Nov 2026 | **Contact form:** added validation and an email builder that creates a `mailto:` message to the recipient set in the code, with preview and copy button |
+| 2 Nov 2026 | **SEO:** unique title, description and keywords on every page; Open Graph and Twitter tags; canonical links; JSON-LD `LocalBusiness`; `robots.txt` and `sitemap.xml` |
+| 2 Nov 2026 | **Images:** renamed all images with descriptive lower-case names and updated every reference; improved alt text and corrected the "Adimule Sildes" caption to "Adidas Adilette Slides"; converted the Asics image and sole-care photo to WebP |
+| 2 Nov 2026 | **Security and speed:** Content Security Policy and `_headers`; logo compressed from 1.2 MB to 140 KB; lazy loading; fixed the "MAMEMLODI" typo in the hero |
+| 2 Nov 2026 | **Effects:** scroll progress bar, sticky header, back-to-top, before/after slider, typewriter, bubbles, brand marquee, cursor paint trail, button ripples and bursts, confetti, card tilt, reveal on scroll, page transitions, toasts, reduced-motion support |
+| 2 Nov 2026 | **Accessibility:** skip link, `aria-live` regions for search results and errors, focus handling in modal and lightbox, visible focus styles |
+
+
 ---
 
 ### 7. References
@@ -228,3 +247,12 @@ SOLE REVIVE
 - The Sneaker Shack, 2026. The Sneaker Shack. [Online] Available at: https://thesneakershack.co.za/ [Accessed 14 August 2026].
 - Vowel Designs, 2023. Shoe Carnival’s New Recruitment Website. [Online] Available at: https://www.vowelsdesigns.com/shoe-carnivals-new-recruitment-website/ [Accessed 14 August 2026].
 
+Agafonkin, V. n.d. *Leaflet: an open-source JavaScript library for mobile-friendly interactive maps* (version 1.9.4). [Online]. Available at: https://leafletjs.com [Accessed 2 November 2026].
+
+Google. n.d. *Search Central: SEO starter guide* and *LocalBusiness structured data*. [Online]. Available at: https://developers.google.com/search/docs [Accessed 2 November 2026].
+
+Mozilla. n.d. *MDN Web Docs: Fetch API, IntersectionObserver, Constraint validation, Content-Security-Policy*. [Online]. Available at: https://developer.mozilla.org [Accessed 2 November 2026].
+
+OpenStreetMap contributors. n.d. *OpenStreetMap*. [Online]. Available at: https://www.openstreetmap.org/copyright [Accessed 2 November 2026].
+
+Schema.org. n.d. *LocalBusiness*. [Online]. Available at: https://schema.org/LocalBusiness [Accessed 2 November 2026].
