@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | SOLE REVIVE</title>
+    <title>Sneaker Cleaning Gallery | SOLE REVIVE Mamelodi</title>
+    <meta name="description" content="Browse sneakers revived by SOLE REVIVE in Mamelodi: Nike, Adidas, Jordan, Asics and Timberland. Click any photo to view it larger.">
+    <meta name="keywords" content="sneaker cleaning gallery, before and after sneakers, Nike sneaker cleaning, Adidas Campus cleaning, Jordan sneaker cleaning, shoe restoration photos">
+    <meta name="author" content="SOLE REVIVE">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#B5533C">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https://cdnjs.cloudflare.com https://*.tile.openstreetmap.org https://*.tile.openstreetmap.fr; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <link rel="canonical" href="https://sole-revive.netlify.app/gallery.html">
+    <link rel="icon" type="image/png" href="images/sole-revive-logo.png">
+    <!-- Open Graph / Twitter: how the page looks when shared on social media -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SOLE REVIVE">
+    <meta property="og:title" content="Sneaker Cleaning Gallery | SOLE REVIVE Mamelodi">
+    <meta property="og:description" content="Browse sneakers revived by SOLE REVIVE in Mamelodi: Nike, Adidas, Jordan, Asics and Timberland. Click any photo to view it larger.">
+    <meta property="og:url" content="https://sole-revive.netlify.app/gallery.html">
+    <meta property="og:image" content="https://sole-revive.netlify.app/images/nike-air-more-uptempo-sneakers.webp">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sneaker Cleaning Gallery | SOLE REVIVE Mamelodi">
+    <meta name="twitter:description" content="Browse sneakers revived by SOLE REVIVE in Mamelodi: Nike, Adidas, Jordan, Asics and Timberland. Click any photo to view it larger.">
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Mamelodi, Pretoria">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header>
         <a href="index.html" class="site-logo">
-            <img src="images/Logo.png" alt="Sole Revive Logo">
+            <img src="images/sole-revive-logo.png" alt="Sole Revive Logo">
         </a>
         <div class="branding">
             <a href="index.html">SOLE REVIVE</a>
-            <h2>SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</h2>
+            <p class="tagline">SOLE REVIVE provides professional premium shoe and sneaker cleaning services in Mamelodi.</p>
         </div>
         <!--Mobile menu button (CSS-only toggle, shown on small screens)-->
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
@@ -29,7 +53,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <section class="gallery-hero">
             <span class="gallery-blob blob-1" aria-hidden="true"></span>
             <span class="gallery-blob blob-2" aria-hidden="true"></span>
@@ -41,29 +65,42 @@
         </section>
 
         <section>
+            <!--Search, brand filter and sort are added by js/main.js; clicking a photo opens the lightbox-->
             <div class="gallery-grid">
-                <figure>
-                    <img src="images/Nike Uptempo.webp" alt="Nike Uptempo" loading="lazy">
+                <figure data-brand="Nike">
+                    <button type="button" class="gallery-item" aria-label="View Nike Uptempo larger">
+                        <img src="images/nike-air-more-uptempo-sneakers.webp" alt="Nike Air More Uptempo sneakers cleaned by SOLE REVIVE" loading="lazy" decoding="async">
+                    </button>
                     <figcaption>Nike Uptempo</figcaption>
                 </figure>
-                <figure>
-                    <img src="images/Blacked Out Timbs.webp" alt="Black Timbs" loading="lazy">
+                <figure data-brand="Timberland">
+                    <button type="button" class="gallery-item" aria-label="View Blacked Out Timberlands larger">
+                        <img src="images/blacked-out-timberland-boots.webp" alt="Blacked-out Timberland boots restored by SOLE REVIVE" loading="lazy" decoding="async">
+                    </button>
                     <figcaption>Blacked Out Timberlands</figcaption>
                 </figure>
-                <figure>
-                    <img src="images/Adidas campus.avif" alt="Adidas Campus" loading="lazy">
+                <figure data-brand="Adidas">
+                    <button type="button" class="gallery-item" aria-label="View Adidas Campus larger">
+                        <img src="images/adidas-campus-sneakers.avif" alt="Adidas Campus sneakers after a professional clean" loading="lazy" decoding="async">
+                    </button>
                     <figcaption>Adidas Campus</figcaption>
                 </figure>
-                <figure>
-                    <img src="images/Adimule Slides.avif" alt="Adimule Slides" loading="lazy">
-                    <figcaption>Adimule Slides</figcaption>
+                <figure data-brand="Adidas">
+                    <button type="button" class="gallery-item" aria-label="View Adidas Adilette Slides larger">
+                        <img src="images/adidas-adilette-slides.avif" alt="Adidas Adilette slides freshly cleaned" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Adidas Adilette Slides</figcaption>
                 </figure>
-                <figure>
-                    <img src="images/JORDAN+TATUM+3.avif" alt="Jordan Jayden Tatum" loading="lazy">
+                <figure data-brand="Jordan">
+                    <button type="button" class="gallery-item" aria-label="View Jordan Jayden Tatum 3 larger">
+                        <img src="images/jordan-tatum-3-basketball-shoes.avif" alt="Jordan Tatum 3 basketball shoes after cleaning" loading="lazy" decoding="async">
+                    </button>
                     <figcaption>Jordan Jayden Tatum 3</figcaption>
                 </figure>
-                <figure>
-                    <img src="images/Asics GEL 1130.png" alt="Asics GEL 1130" loading="lazy">
+                <figure data-brand="Asics">
+                    <button type="button" class="gallery-item" aria-label="View Asics GEL 1130 larger">
+                        <img src="images/asics-gel-1130-running-shoes.webp" alt="Asics GEL-1130 running shoes after cleaning" loading="lazy" decoding="async">
+                    </button>
                     <figcaption>Asics GEL 1130</figcaption>
                 </figure>
             </div>
@@ -89,3 +126,4 @@
     </footer>
 </body>
 </html>
+
