@@ -4,5 +4,4 @@ Allow: /
 Disallow: /js/
 Disallow: /CSS/
 
-# Replace with your real deployed address
-Sitemap: https://sole-revive.netlify.app/sitemap.xml
+Sitemap: https://watsonmorales.github.io/Mokwena_ST10518473_WEDE5020_PoE/sitemap.xml
