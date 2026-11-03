@@ -14,7 +14,9 @@
 (() => {
     'use strict';
 
-    /* 0. CONFIG & DATA */
+    /* =================================================================
+       0. CONFIG & DATA
+       ================================================================= */
     const CONFIG = {
         // Recipient of the contact-form email (used to build the mailto: link)
         contactEmail: 'info@solerevive.co.za',
@@ -121,7 +123,9 @@
         }
     };
 
-    /* 1. HELPERS */
+    /* =================================================================
+       1. HELPERS
+       ================================================================= */
     const $ = (sel, ctx = document) => ctx.querySelector(sel);
     const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -179,9 +183,11 @@
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
 
-    /* 2. VISUAL EFFECTS ENGINE
+    /* =================================================================
+       2. VISUAL EFFECTS ENGINE
           One full-screen canvas draws paint splats, the cursor trail and
-          confetti. It only runs while there are particles on screen. */
+          confetti. It only runs while there are particles on screen.
+       ================================================================= */
     const fx = (() => {
         const none = { burst() {}, confetti() {}, trail() {}, rain() {} };
         if (!motionOK()) return none;
@@ -248,7 +254,7 @@
                 add({ x: x + between(-4, 4), y: y + between(-4, 4), vx: between(-0.3, 0.3), vy: between(-0.2, 0.5), g: 0.02, drag: 0.98,
                     life: 26, max: 26, size: between(3, 6), color: pick(), shape: 'dot', rot: 0, vr: 0 });
             },
-            /** Confetti cannon from the bottom corners (KaBoom) */
+            /** Confetti cannon from the bottom corners */
             confetti(count = 140) {
                 for (let i = 0; i < count; i++) {
                     const left = i % 2 === 0;
@@ -268,7 +274,9 @@
         };
     })();
 
-    /* 3. SITE-WIDE EFFECTS */
+    /* =================================================================
+       3. SITE-WIDE EFFECTS
+       ================================================================= */
     /* ---- Toast notifications ---- */
     let toastRegion;
     function toast(message, ms = 3800) {
@@ -423,8 +431,10 @@
         });
     }
 
-    /* 4. HERO EFFECTS (home page) */
-    /* ---- Before / after slider built from the two hero photos (The best part of the website in my opinion) ---- */
+    /* =================================================================
+       4. HERO EFFECTS (home page)
+       ================================================================= */
+    /* ---- Before / after slider built from the two hero photos ---- */
     function initHeroCompare() {
         const hero = $('.hero');
         if (!hero) return;
@@ -491,7 +501,7 @@
         })();
     }
 
-    /* ---- Soap bubbles drifting up behind the hero (This is my second favourite part)---- */
+    /* ---- Soap bubbles drifting up behind the hero ---- */
     function initBubbles() {
         const hero = $('.hero');
         if (!hero || !motionOK()) return;
@@ -514,7 +524,9 @@
         }, 900);
     }
 
-    /* 5. INTERACTIVE ELEMENTS: accordion, tabs, modal */
+    /* =================================================================
+       5. INTERACTIVE ELEMENTS: accordion, tabs, modal
+       ================================================================= */
     /* ---- Accordion (FAQ). Markup lives in the HTML so it is crawlable. ---- */
     function initAccordions() {
         $$('.accordion').forEach(group => {
@@ -573,7 +585,9 @@
         return { open, close };
     })();
 
-    /* 6. DYNAMIC CONTENT */
+    /* =================================================================
+       6. DYNAMIC CONTENT
+       ================================================================= */
     /* ---- Typing animation helper ---- */
     function typeInto(node, text) {
         node.textContent = '';
@@ -737,7 +751,9 @@
         } else render();
     }
 
-    /* 7. GALLERY: search / filter / sort + lightbox */
+    /* =================================================================
+       7. GALLERY: search / filter / sort + lightbox
+       ================================================================= */
     function initGallery() {
         const grid = $('.gallery-grid');
         if (!grid) return;
@@ -867,7 +883,9 @@
         });
     }
 
-    /* 8. INTERACTIVE MAP (Leaflet + OpenStreetMap)*/
+    /* =================================================================
+       8. INTERACTIVE MAP (Leaflet + OpenStreetMap)
+       ================================================================= */
     function initMap() {
         const mapEl = $('#map');
         if (!mapEl) return;
@@ -961,7 +979,9 @@
         setTimeout(() => map.invalidateSize(), 300);
     }
 
-    /* 9. FORMS */
+    /* =================================================================
+       9. FORMS
+       ================================================================= */
     /** Validation rules. Each returns an error message, or '' when valid. */
     const V = {
         name: v => !v ? 'Please enter your full name.'
