@@ -70,6 +70,8 @@
             <h2>Service Enquiry Form</h2>
             <form id="enquiry-form" name="enquiry" action="enquiry.html" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="enquiry">
+                <!--Honeypot: hidden from people, bots tend to fill it in-->
+                <p class="hp-field" aria-hidden="true">
                     <label>Leave this empty: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
                 </p>
                 <fieldset>
